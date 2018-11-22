@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+	<head>
+    <title>Jumper</title>
+    <script src="phaser.min.js"></script>
+    <script src="boot.js"></script>
+		<script src="preload.js"></script>
+		<script src="gametitle.js"></script>
+		<script src="thegame.js"></script>
+    <script src="thegame2.js"></script>
+    <script src="thegame3.js"></script>
+    		<style>
+    			body{margin:0}
+    		</style>
+		<script>
+			(function() {
+				var game = new Phaser.Game(300, 500, Phaser.CANVAS, "game");
+				game.state.add("Boot",boot);
+				game.state.add("Preload",preload);
+				game.state.add("GameTitle",gameTitle);
+				game.state.add("TheGame",theGame);
+        game.state.add("TheGame2",theGame2);
+        game.state.add("TheGame3",theGame3);
+        game.state.start("Boot");
+			})();
+		</script>
+    </head>
+    <body>
+    </body>
+</html>
